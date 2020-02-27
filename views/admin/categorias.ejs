@@ -1,0 +1,20 @@
+<%- include('header') %>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <br>
+    <h4>Nova categoria: <a href="/admin/categoria/nova"><i class="far fa-plus-square"></i></a></h4>
+    <br>
+    <div>
+        <ul>
+            <% categorias.forEach( categoria => { %>
+            <li>
+                <%- categoria.categoria %> |
+                <a href="/admin/categorias/delete/<%- categoria.id %>"><i class="fas fa-trash"></i></a>
+                <a href="/admin/categorias/editar/<%- categoria.id %>"><i class="fas fa-edit"></i></a>    
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+
+<%- include('footer') %>

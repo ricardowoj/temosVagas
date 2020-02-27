@@ -1,0 +1,14 @@
+<%- include('header') %>
+
+    <% categorias.forEach( categoria => { %>
+    <div>
+        <br>
+        <h3><%- categoria.categoria %></h3>
+        <ul>
+            <% categoria.vagas.forEach( vaga => { %>
+            <li><a href="vaga/<%- vaga.id %>"><%- vaga.titulo %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+    <% }) %>
+<%- include('footer') %>

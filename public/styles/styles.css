@@ -1,0 +1,15 @@
+body {
+    font-family: Georgia;
+}
+body img {
+    width: 250px;
+    margin-top: 100px;
+}
+
+footer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    clear: both;
+}
+
