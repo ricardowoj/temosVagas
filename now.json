@@ -6,4 +6,4 @@
     "rote":[
         { "src": "/.*", "dest": "index.js" }
     ]
-} 
+}
