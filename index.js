@@ -51,7 +51,7 @@ app.get('/admin/vagas/delete/:id', async(request, response) => {
 
 app.get('/admin/vagas/nova', async(request, response) => {
     const db = await dbConnection
-    const categorias = await db.all('select * from Categorias')
+    const categorias = await db.all('select * from categorias')
     response.render('admin/nova-vaga', { categorias })
 })
 
@@ -64,7 +64,7 @@ app.post('/admin/vagas/nova', async(request, response) => {
 
 app.get('/admin/vagas/editar/:id', async(request, response) => {
     const db = await dbConnection
-    const categorias = await db.all('select * from Categorias')
+    const categorias = await db.all('select * from categorias')
     const vaga = await db.get('select * from vagas where id = '+request.params.id)
     response.render('admin/editar-vaga', { categorias, vaga })
 })
@@ -91,8 +91,8 @@ app.get('/admin/categorias/delete/:id', async(request, response) => {
 
 app.get('/admin/categorias/editar/:id', async(request, response) => {
     const db = await dbConnection
-    const categorias = await db.all('select * from Categorias')
-    response.render('admin/editar-categoria', { categorias })
+    const categoria = await db.get('select * from categorias where id= ' +request.params.id)
+    response.render('admin/editar-categoria', { categoria })
 })
 
 app.post('/admin/categorias/editar/:id', async(request, response) => {
