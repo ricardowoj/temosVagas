@@ -1,10 +1,10 @@
 # temosVagas
 
-Desinvolvido em NodeJs! 
+Desenvolvido em NodeJs! 
 
 Link para acesso: 
 https://temosvagas-git-master.ricardowoj.now.sh/
 
-Projeto de estudo - Divulgar vagas de emprego
+Projeto para divulgar vagas de emprego.
 
 
